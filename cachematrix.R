@@ -8,7 +8,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
 	inv <- NULL
 	## Set the matrix in local scope
-	mat <<- x
+	mat <- x
 
 	##
 	# Get the original matrix
