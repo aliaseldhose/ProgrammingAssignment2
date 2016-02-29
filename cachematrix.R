@@ -11,6 +11,16 @@ makeCacheMatrix <- function(x = matrix()) {
 	mat <- x
 
 	##
+	# Update the original matrix and reset the cached inverse
+	##
+	set <- function(new_matrix = matrix()) {
+		# Update the original matrix
+		mat <<- new_matrix
+		# Reset the cache
+		inv <<- null
+	}
+
+	##
 	# Get the original matrix
 	##
 	get <- function() {
@@ -31,7 +41,7 @@ makeCacheMatrix <- function(x = matrix()) {
 	}
 
 	# Return the list list defined functions
-	list(get = get, setInverse = setInverse, getInverse = getInverse)
+	list(set = set, get = get, setInverse = setInverse, getInverse = getInverse)
 }
 
 ##
