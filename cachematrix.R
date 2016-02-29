@@ -17,7 +17,7 @@ makeCacheMatrix <- function(x = matrix()) {
 		# Update the original matrix
 		mat <<- new_matrix
 		# Reset the cache
-		inv <<- null
+		inv <<- NULL
 	}
 
 	##
